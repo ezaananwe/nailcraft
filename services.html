@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Services Section</title>
+    <!-- Font Awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        body{
+            width: 100%;
+  height: 100%;
+  --color: #E1E1E1;
+  background-color: #F3F3F3;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
+        }
+        * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.btn-12,
+.btn-12 *,
+.btn-12 :after,
+.btn-12 :before,
+.btn-12:after,
+.btn-12:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-12 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #01788D;
+  background-image: none;
+    width: 11vw;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  width: 11vw;
+  font-family: ui-sans-serif, system-ui,  Helvetica, Arial, sans-serif,
+    Color  Symbol Color;
+  font-size: 0.7.5vw;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#bee900, #a83131);
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.btn-12:disabled {
+  cursor: default;
+}
+
+.btn-12:-moz-focusring {
+  outline: auto;
+}
+
+.btn-12 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-12 [hidden] {
+  display: none;
+}
+
+.btn-12 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+
+.btn-12 span {
+  mix-blend-mode: difference;
+}
+
+.btn-12:after,
+.btn-12:before {
+  background: linear-gradient(
+    90deg,
+    #141414 25%,
+    transparent 0,
+    transparent 50%,
+    #000000 0,
+    #000000 75%,
+    transparent 0
+  );
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: translateY(var(--progress, 100%));
+  transition: transform 0.2s ease;
+  z-index: -1;
+}
+
+.btn-12:after {
+  --progress: -100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 25%,
+    #000000 0,
+    #000000 50%,
+    transparent 0,
+    transparent 75%,
+    #000000 0
+  );
+  z-index: -1;
+}
+
+.btn-12:hover:after,
+.btn-12:hover:before {
+  --progress: 0;
+}
+
+
+nav ul {
+  padding: 5px 10px;
+
+  list-style: none;
+}
+body::-webkit-scrollbar{
+  background-color: #000000;
+  border-radius: 30px;
+}
+::-webkit-scrollbar-button{
+  background-color: #EBBC67;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #0098B1;
+  border-radius: 20px;
+}
+
+
+nav {
+  position:relative;
+  margin-top: 1vh;
+  margin-bottom: 3vh;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  /* border: 1px solid black !important; */
+  border-radius: 20px;
+  background-color:#E3A93F;
+  /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.562); */
+  backdrop-filter: blur(2px);
+
+  z-index: +999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fffefe;
+  height: 8vh;
+}
+
+.logo {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+  border-radius: 50px;
+}
+
+.nav-links li {
+  text-decoration: none;
+  padding: 5px 14px;
+}
+
+.nav-links a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #0098B1;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  background-color: #4c9e9e;
+  border-radius: 20px;
+  letter-spacing: 5px;
+  padding: 5px 7px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.line1,
+.line2,
+.line3 {
+  width: 30px;
+  height: 3px;
+  background-color: #000000;
+  margin: 5px;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    word-spacing: 7px;
+
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  width: 100%;
+  padding: 0 1em 1em 1em;
+  text-align: center;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%, #E9BB66 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c;
+  margin: 1em 0;
+}
+p {
+  color: #575a7b;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+.icon-wrapper {
+  background-color: #E9BB66;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+.card:hover {
+  background-position: 0 100%;
+}
+.card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color: #E9BB66;
+}
+.card:hover h3 {
+  color: #ffffff;
+}
+.card:hover p {
+  color: #f0f0f0;
+}
+@media screen and (min-width: 768px) {
+  section {
+    padding: 0 2em;
+  }
+  .column {
+    flex: 0 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 678px) {
+    .btn-12{
+        width: 40vw;
+        height: 8vw;
+    }
+  /* responsive nav */
+  .nav-links {
+    display: none;
+    position: absolute;
+    font-size: 30px;
+    top: 70px;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background-color:#E3A93F;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+  .home-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em 3em;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <nav>
+        <div class="logo">
+          <img src="logo.png" alt="" height="130" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li id="cnt"><a href="contact_page.html">Contact</a></li>
+          
+        </ul>
+        <div class="up">
+        <a href="signup-in.html"><button class="btn-12" id="btn_12">SIGN UP/IN</button></a>
+      </div>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    <section>
+      <div class="row">
+        <h1 class="section-heading">Our Services</h1>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-hammer"></i>
+            </div>
+            <h3>Info OF All Trends</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-brush"></i>
+            </div>
+            <h3>Categorised Information</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-wrench"></i>
+            </div>
+            <h3>Seperate Sections For Kids And Adults Art</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-truck-pickup"></i>
+            </div>
+            <h3>Newwest Art Ideas</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-broom"></i>
+            </div>
+            <h3>All About Nails IN One Platform</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-plug"></i>
+            </div>
+            <h3>Provide Info To Keep You Up To Date</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+    const burger = document.querySelector(".burger");
+const navLinks = document.querySelector(".nav-links");
+const signa = document.querySelector("#btn-12");
+
+burger.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+  burger.classList.toggle("toggle");
+});
+const kids_sec= document.querySelector(".button-learn");
+const adult_sec= document.querySelector(".button-learn2");
+const contact = document.querySelector("#cnt")
+
+  signa.addEventListener("click", () => {
+    window.location.href = "signup-in.html";
+    });
+  cnt.addEventListener("click", () => {
+  window.location.href = "contact_page.html";
+  });
+
+  
+    </script>
+  </body>
+</html>
